@@ -154,6 +154,26 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("EVEN OR ODD?\n");
 
             // Enter your solution here
+            // Ask the user for a number
+            Console.WriteLine("Enter a number");
+
+            // Store the number in a variable
+            int number = Int32.Parse(Console.ReadLine());
+
+            // Determine if number is even or odd
+            bool isEven = (number % 2 == 0);
+            // Console.WriteLine(isEven);
+
+            // If number is odd, print "odd" to console
+            if(number % 2 != 0)
+            {
+                Console.WriteLine("This number is odd");
+            }
+            // If number is even, print "even" to console
+            else
+            {
+                Console.WriteLine("This number is even");
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
