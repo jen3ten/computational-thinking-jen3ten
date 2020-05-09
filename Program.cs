@@ -247,7 +247,7 @@ namespace ComputationalThinkingExercises
             Console.ReadLine();
         }
 
-        static void DivisibleBy3()
+        static void DivisibleBy3()  // I/O, int parse, modulus, comparison operator, conditionals
         {
             // Ask the user for a number and then tell them if it is divisible by 3
 
@@ -255,12 +255,23 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("DIVISIBLE BY 3\n");
 
             // Enter your solution here
+            Console.WriteLine("Enter a number");
+            int number = Int32.Parse(Console.ReadLine());
+
+            if(number % 3 == 0)
+            {
+                Console.WriteLine("This number is divisible by 3");
+            }
+            else
+            {
+                Console.WriteLine("This number is not divisible by 3");
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
 
-        static void ReverseCounting()
+        static void ReverseCounting()  // I/O, int parse, loops
         {
             // Ask the user for a number between 1-20. Starting at the number given,
             // count backwards to 1 and print the numbers to the console.
@@ -269,12 +280,34 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("REVERSE COUNTING\n");
 
             // Enter your solution here
+            Console.WriteLine("Enter a number between 1-20");
+            int number = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("For loop:");
+            for(int i = number; i > 0; i = i - 1)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine("\nDo While loop:");
+            do
+            {
+                Console.WriteLine(number);
+                number = number - 1;
+            } while (number > 0);
+
+            Console.WriteLine("\nWhile loop:");
+            while(number > 0)
+            {
+                Console.WriteLine(number);
+                number = number - 1;
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
 
-        static void RestaurantBill()
+        static void RestaurantBill()    // I/O, int parse, float parse, mathematical operator, conditional, comparison operator
         {
             // At a restaurant, Mike and his three friends decided to divide the bill evenly.
             // If each person paid $13 then what was the total bill?
@@ -290,6 +323,26 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("RESTAURANT BILL\n");
 
             // Enter your solution here
+            Console.WriteLine("How many diners?");
+            int numberDiners = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("How much did each diner pay?");
+            double costPerDiner = Double.Parse(Console.ReadLine());
+
+            double totalBill = numberDiners * costPerDiner;
+
+            Console.WriteLine($"The total meal cost ${numberDiners * costPerDiner}");
+
+            if(totalBill > 50)
+            {
+                totalBill = totalBill * .90;
+            }
+            else
+            {
+                totalBill = totalBill * .95;
+            }
+
+            Console.WriteLine($"Your meal cost has been reduced to ${totalBill}");
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
