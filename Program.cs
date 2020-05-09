@@ -104,7 +104,7 @@ namespace ComputationalThinkingExercises
             }
         }
 
-        static void AreTheseIntegersEqual()
+        static void AreTheseIntegersEqual()     // I/O, string, comparison operator, bool, conditional, string equals
         {
             // Write a console application to ask the user for two integers. 
             // Check and see if the two integers are equal to each other.
@@ -145,7 +145,7 @@ namespace ComputationalThinkingExercises
             Console.ReadLine();
         }
 
-        static void EvenOrOdd()
+        static void EvenOrOdd()     // I/O, string, int parse, modulus, bool, inequality comparison, conditional
         {
             // Write a console application that asks the user for a number.
             // Tell the user if that number is even or odd.
@@ -179,7 +179,7 @@ namespace ComputationalThinkingExercises
             Console.ReadLine();
         }
 
-        static void VowelOrConsonant()
+        static void VowelOrConsonant()      // I/O, string, bool, switch, string ToLower
         {
             // Write a console application to check whether a letter is a vowel or consonant.
             // Hint: You can do this problem using a switch or an if condition.
@@ -188,12 +188,36 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("VOWEL OR CONSONANT?\n");
 
             // Enter your solution here
+            Console.WriteLine("Enter a letter");
+            string letter = Console.ReadLine();
+            bool isVowel = true;
+            string response = "The letter is a vowel";
+
+            switch (letter)
+            {
+                case "a":
+                    break;
+                case "e":
+                    break;
+                case "i":
+                    break;
+                case "o":
+                    break;
+                case "u":
+                    break;
+                default:
+                    // isVowel = false;
+                    response = "The letter is a consonant";
+                    break;
+            }
+
+            Console.WriteLine(response);
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
 
-        static void FindLargestNumber()
+        static void FindLargestNumber()     // I/O, int parse, conditional, comparison operator, concatentation, interpolation, composite
         {
             // Write a console application that prompts the user to input two integer values.
             // Find and print the greatest value of the two integers.
@@ -202,6 +226,22 @@ namespace ComputationalThinkingExercises
             Console.WriteLine("FIND THE LARGEST NUMBER\n");
 
             // Enter your solution here
+            Console.WriteLine("Enter a number");
+            int firstNumber = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter a second number");
+            int secondNumber = Int32.Parse(Console.ReadLine());
+
+            if(firstNumber > secondNumber)
+            {
+                Console.WriteLine("Number " + firstNumber + " is larger");  // String Concatentation
+                Console.WriteLine($"Number {firstNumber} is larger");   // Interpolated String containing interpolated expressions
+                Console.WriteLine("I said, Number {0} is larger", firstNumber);  // Composite Formatting
+            }
+            else
+            {
+                Console.WriteLine("Number " + secondNumber + " is larger");
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
