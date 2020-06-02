@@ -111,6 +111,7 @@ namespace ComputationalThinkingExercises
             // If they are, inform the the user that the numbers are equal,
             // else inform the user that the numbers are not equal
 
+            Console.WriteLine("Hello");
             Console.Clear();
             Console.WriteLine("ARE THESE INTEGERS EQUAL?\n");
 
